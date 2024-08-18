@@ -28,10 +28,12 @@ body {
         v1=parseInt(localStorage.getItem("span1"));
         if(localStorage.getItem("span1")!=null);
             span1.textContent=localStorage.getItem("span1");
+		
         function totalClick(click){
             v1 +=1
             
             localStorage.setItem("span1", v1);
+			if (isNaN(v1)) v1 = span1;
             document.getElementById("span1").textContent=v1; 
             
 
